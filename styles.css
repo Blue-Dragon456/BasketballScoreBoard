@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "Cursed Timer ULiL";
+  src: url(fonts/CursedTimerUlil-Aznm.ttf);
+}
+:root {
+  --primary-color: #bf1641;
+  --secondary-color: #008248;
+  --bg-color: #fff;
+  --text-color-dark: #1d2531;
+  --text-color-light: #fff;
+  --main-font: "Cursed Timer ULiL", sans-serif;
+  --secondary-font: "Teko", sans-serif;
+  --global-font-size: 16px;
+  --global-font-weight: 400;
+  --global-line-height: 1.5;
+}
+body {
+  text-align: center;
+  font-family: var(--main-font);
+  color: var(--text-color-dark);
+}
+
+.hero {
+  background: url(images/hero-bg-img.jpg);
+  background-position: center;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #181818e6;
+  z-index: 1;
+}
+.hero-content {
+  width: 1140px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  z-index: 2;
+  padding: 2rem;
+}
+.scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: var(--bg-color);
+  border-radius: 50px;
+  padding: 0.5rem 1rem;
+  margin-top: 3rem;
+}
+.team {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.team-left {
+  flex-direction: row;
+}
+
+.logo {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+  border-radius: 10%;
+}
+
+.team-name {
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  padding: 0.8rem 1.5rem;
+  border-radius: 20px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 3px black;
+}
+
+.red {
+  background: #b31217;
+}
+
+.green {
+  background: #007a33;
+}
+
+.vs {
+  font-family: var(--secondary-font);
+  font-weight: bold;
+  font-size: 3rem;
+  color: black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.comp-name {
+  display: flex;
+  font-family: "Inter";
+  color: var(--text-color-dark);
+  background-color: var(--bg-color);
+  width: 90%;
+  margin: 3rem auto;
+  padding: 2rem 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+#title1 {
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  -webkit-text-stroke: 0.5px white;
+}
+.counters {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem;
+}
+.first-grid {
+  grid-column: span 3;
+}
+.counter1 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1 1;
+  background-color: white;
+  padding: 2rem 3rem;
+  width: 400px;
+  gap: 0.5rem;
+
+  border-radius: 2rem;
+}
+
+.num-counter {
+  font-size: 10rem;
+}
+.increment button {
+  font-size: 1rem;
+}
+.increment {
+  border: 1px solid;
+  padding: 1rem;
+  border-radius: 4px;
+}
+button {
+  background-color: transparent;
+  border: none;
+}
+.timer {
+  background: white;
+  width: 400px;
+  margin: 0 auto;
+  padding: 2rem 0 1rem 0;
+  font-size: 6rem;
+  border-radius: 2rem;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  width: 800px;
+  gap: 1rem;
+}
+
+#newgame-btn,
+#start-btn,
+#stop-btn {
+  max-width: 300px;
+  color: white;
+  padding: 1rem 2rem 0.6rem 2rem;
+  font-size: 2rem;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+#newgame-btn {
+  background-color: var(--primary-color);
+}
+#start-btn {
+  background-color: var(--secondary-color);
+}
+#stop-btn {
+  background-color: var(--text-color-dark);
+}

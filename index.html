@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Basketball ScoreBoard</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="hero-content">
+        <div class="scoreboard">
+          <div class="team team-left">
+            <img
+              src="images/chicago-bull-img.jpg"
+              alt="Chicago Bulls Logo"
+              class="logo"
+            />
+            <span class="team-name red">Chicago Bulls</span>
+          </div>
+
+          <div class="vs">VS</div>
+
+          <div class="team team-right">
+            <span class="team-name green">Boston Celtics</span>
+            <img
+              src="images/boston-celtics-logo.png"
+              alt="Boston Celtics Logo"
+              class="logo"
+            />
+          </div>
+        </div>
+
+        <!-- S -->
+        <div class="counters">
+          <div class="counter1">
+            <div class="first-grid">
+              <p class="num-counter" id="team1-el">0</p>
+            </div>
+            <div class="increment" onclick="incrementByOne()">
+              <button>+1</button>
+            </div>
+            <div class="increment" onclick="incrementByTwo()">
+              <button>+2</button>
+            </div>
+            <div class="increment" onclick="incrementByThree()">
+              <button>+3</button>
+            </div>
+          </div>
+
+          <div class="counter1">
+            <div class="first-grid">
+              <p class="num-counter" id="team2-el">0</p>
+            </div>
+            <div class="increment" onclick="incrementByOneTeam2()">
+              <button>+1</button>
+            </div>
+            <div class="increment" onclick="incrementByTwoTeam2()">
+              <button>+2</button>
+            </div>
+            <div class="increment" onclick="incrementByThreeTeam2()">
+              <button>+3</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="timer">
+          <p id="timer-el">48:00</p>
+        </div>
+        <div class="btn">
+        <div id="start-btn" onclick="setInterval(decrementTimeLeft, 2000)">
+          Start
+        </div>
+        <div id="stop-btn" onclick="setInterval(decrementTimeLeft, 2000)">
+          Stop
+        </div>
+        <div id="newgame-btn" onclick="newGame()">New Game</div>
+      </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
